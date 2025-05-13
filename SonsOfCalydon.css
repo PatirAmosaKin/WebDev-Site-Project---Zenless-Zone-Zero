@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 2em;
+    background-color: rgba(25, 25, 25, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .logo {
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px rgba(255, 111, 97, 0.7));
+  }
+
+  #toggle-music {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  #toggle-music:hover {
+    transform: scale(1.1);
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .character {
+    position: absolute;
+    max-height: 80vh;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+
+  .character:hover {
+    transform: scale(1.05);
+  }
+
+  /* Social media icons styling */
+  .twitter, .youtube, .tiktok, .discord, .instagram, .facebook, .hoyolab, .twitch, .telegram, .reddit {
+    position: static;
+    display: inline-block;
+    max-height: 30px;
+    width: auto;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+  }
+
+  .social-media-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+  }
+
+  .social-media-container a:hover img {
+    transform: scale(1.2);
+  }
+
+  
+  #toggle-music img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* This is a duplicate navbar style that's been replaced with the one above */
+
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 0 15px;
+  }
+
+  .nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ff6f61, #ff9a8b);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #ff6f61;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .nav-links a.active {
+    color: #ff6f61;
+  }
+
+  .nav-links a.active::after {
+    width: 100%;
+    background: linear-gradient(to right, #ff6f61, #ff9a8b);
+  }
